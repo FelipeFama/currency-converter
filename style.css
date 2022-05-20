@@ -1,9 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Koulen&display=swap');
+
 body {
-  background-color: #f9fafc;
+  background-image: url(./assets/dolar.jpg);
+  display: flex;
+  font-family: 'Koulen', cursive;
+  font-size: 1.5rem;
+  width: 100%;
 }
 
 .container {
+  margin-block: 5rem;
   padding-top: 7.5rem;
+  background: rgba(249, 245, 245, 0.34);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(234, 223, 223, 0.1);
+  backdrop-filter: blur(2.3px);
+  -webkit-backdrop-filter: blur(2.3px);
+  border: 1px solid rgba(46, 43, 43, 0.43);
+  width: 45.75rem;
+}
+
+.image-content {
+ width: 50%;
+}
+
+.form-select {
+  font-size: 1.5rem;
 }
 
 .converted-value {
