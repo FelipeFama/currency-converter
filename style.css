@@ -1,16 +1,16 @@
-@import url('https://fonts.googleapis.com/css2?family=Koulen&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Koulen&display=swap");
 
 body {
   background-image: url(./assets/dolar.jpg);
   display: flex;
-  font-family: 'Koulen', cursive;
+  font-family: "Koulen", cursive;
   font-size: 1.5rem;
   width: 100%;
 }
 
 .container {
   margin-block: 5rem;
-  padding-top: 7.5rem;
+  padding-top: 1.5rem;
   background: rgba(249, 245, 245, 0.34);
   border-radius: 16px;
   box-shadow: 0 4px 30px rgba(234, 223, 223, 0.1);
@@ -21,7 +21,7 @@ body {
 }
 
 .image-content {
- width: 50%;
+  width: 40%;
 }
 
 .form-select {
