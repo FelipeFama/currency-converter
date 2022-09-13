@@ -1,8 +1,9 @@
 # Conversor de moedas com javascript puro
 
-![conversordemoedasgif](https://user-images.githubusercontent.com/91050670/169563350-1617368e-653d-4d4a-84c4-9704086f1e00.gif)
+![conversor-de-moedas](https://user-images.githubusercontent.com/91050670/189984705-5aee7ffb-3b21-4246-9158-d9118ea9be0b.png)
 
 # Descrição
+
 
 <p>Projeto onde foi trabalhado operações assíncronas, consumo de API e o uso de um framework para ajustar o posicionamento dos itens na aplicação.</p>
 
