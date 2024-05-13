@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Koulen&display=swap");
 
 body {
-  background-image: url(/assets/img/dolar.jpg);
+  background-image: url(../public/img/dolar.jpg);
   display: flex;
   font-family: "Koulen", cursive;
   font-size: 1.5rem;
@@ -21,7 +21,7 @@ body {
 }
 
 .image-content {
-  width: 17%;
+  width: 16%;
 }
 
 .form-select {
