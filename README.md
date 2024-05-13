@@ -1,13 +1,12 @@
-# Conversor de moedas com javascript puro
+# Currency converter with pure javascript
 
 ![conversor-de-moedas](https://user-images.githubusercontent.com/91050670/189984705-5aee7ffb-3b21-4246-9158-d9118ea9be0b.png)
 
-# Descrição
+# Description
 
+<p>Project where asynchronous operations, API consumption and the use of a framework to adjust the positioning of items in the application were worked on.</p>
 
-<p>Projeto onde foi trabalhado operações assíncronas, consumo de API e o uso de um framework para ajustar o posicionamento dos itens na aplicação.</p>
-
-## Tecnologias Utilizadas 
+## Technologies Used
 
 <div style="display: flex" >
   
@@ -18,6 +17,6 @@
 
 </div>
 
-## Link da Api 
+## API Link 
 
 <p><a href="https://www.exchangerate-api.com/">ExchangeRate-API</a></p>
