@@ -1,3 +1,4 @@
+import { showAlert } from "../components/showAlert";
 import { ErrorType, ExchangeRate } from "../types";
 
 const apiKey = import.meta.env.VITE_CURRENCY_KEY;
@@ -34,7 +35,8 @@ export const fetchExchangeRate = async (
     }
     return exchangeRateData as ExchangeRate;
   } catch (err) {
-    // showAlert(err.message);
+    console.log(err)
+    showAlert(err);
     return null;
   }
 };

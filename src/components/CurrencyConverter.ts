@@ -28,6 +28,6 @@ export class CurrencyConverter {
 
   private async init() {
     const exchangeRate = await fetchExchangeRate("USD");
-    console.log(exchangeRate);
+    
   }
 }
