@@ -10,15 +10,15 @@ document.querySelector<HTMLDivElement>("#app")!.innerHTML = `
 </figure>
 <article data-js="currencies-container" class="row justify-content-center mb-4 mt-4">
   <aside class="col-sm-3 col-lg-2">
-    <select data-js="currency-one" class="form-select"></select>
+    <select data-js="currency-one" class="form-select" aria-label="select"></select>
   </aside>
   <aside class="col-sm-3 col-lg-2">
-    <select data-js="currency-two" class="form-select"></select>
+    <select data-js="currency-two" class="form-select" aria-label="select"></select>
   </aside>
 </article>
 <article class="row justify-content-center align-items-center mb-4 mt-4">
   <aside class="col-sm-3 col-md-2">
-    <input data-js="currency-one-times" type="number" min="1" class="form-control form-control-lg" value="1">
+    <input data-js="currency-one-times" type="number" min="1" class="form-control form-control-lg" value="1" aria-label="value">
   </aside>
   <aside class="col-sm-3 col-md-2">
     <p data-js="converted-value" class="converted-value fs-1 text-center mb-0"></p>
