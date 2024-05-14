@@ -4,6 +4,9 @@ export interface ExchangeRate {
   };
 }
 
-export interface ErrorResponse {
-  message: string;
-}
+export type ErrorType =
+  | "unsupported-code"
+  | "malformed-request"
+  | "invalid-key"
+  | "inactive-account"
+  | "quota-reached";

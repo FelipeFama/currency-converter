@@ -1,3 +1,5 @@
+import { fetchExchangeRate } from "../services/api";
+
 export class CurrencyConverter {
   private currencyOneEl: HTMLSelectElement;
   private currencyTwoEl: HTMLSelectElement;
@@ -21,6 +23,11 @@ export class CurrencyConverter {
     this.timesCurrencyOneEl = document.querySelector(
       '[data-js="currency-one-times"]'
     ) as HTMLInputElement;
-    
+    this.init();
+  }
+
+  private async init() {
+    const exchangeRate = await fetchExchangeRate("USD");
+    console.log(exchangeRate);
   }
 }
