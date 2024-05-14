@@ -1,5 +1,5 @@
 import "./styles/style.css";
-import logo from "../public/icon/logo.svg";
+import logo from "../public/icons/logo.svg";
 import { CurrencyConverter } from "./components/CurrencyConverter";
 
 document.querySelector<HTMLDivElement>("#app")!.innerHTML = `
