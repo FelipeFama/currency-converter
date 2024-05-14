@@ -34,7 +34,23 @@ export class CurrencyConverter {
     if (exchangeRate) {
       this.exchangeRate = exchangeRate;
       this.showInitialInfo();
+      this.addEventListeners();
     }
+  }
+
+  private addEventListeners() {
+    this.timesCurrencyOneEl.addEventListener(
+      "input",
+      this.updateConvertedValue.bind(this)
+    );
+    this.currencyTwoEl.addEventListener(
+      "input",
+      this.updateConvertedValue.bind(this)
+    );
+    this.currencyOneEl.addEventListener(
+      "input",
+      this.handleCurrencyOneChange.bind(this)
+    );
   }
 
   private getOptions(
@@ -58,6 +74,15 @@ export class CurrencyConverter {
       this.convertedValueEl.textContent = (
         this.timesCurrencyOneEl.valueAsNumber * currencyTwoRate
       ).toFixed(2);
+      this.valuePrecisonEl.textContent = `1 ${this.currencyOneEl.value} = ${currencyTwoRate} ${this.currencyTwoEl.value}`;
+    }
+  }
+
+  private async handleCurrencyOneChange() {
+    const exchangeRate = await fetchExchangeRate(this.currencyOneEl.value);
+    if (exchangeRate) {
+      this.exchangeRate = exchangeRate;
+      this.updateConvertedValue();
     }
   }
 

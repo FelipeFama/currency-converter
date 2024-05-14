@@ -26,5 +26,5 @@ document.querySelector<HTMLDivElement>("#app")!.innerHTML = `
   <p data-js="conversion-precision" class="conversion-precision text-center m-4"></p>
 </article>
 `;
-console.log(new CurrencyConverter())
+
 new CurrencyConverter();
