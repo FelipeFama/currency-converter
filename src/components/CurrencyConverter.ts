@@ -1,4 +1,5 @@
 import { fetchExchangeRate } from "../services/api";
+import { ExchangeRate } from "../types";
 
 export class CurrencyConverter {
   private currencyOneEl: HTMLSelectElement;
@@ -6,6 +7,8 @@ export class CurrencyConverter {
   private convertedValueEl: HTMLElement;
   private valuePrecisonEl: HTMLElement;
   private timesCurrencyOneEl: HTMLInputElement;
+
+  private exchangeRate: ExchangeRate | null = null;
 
   constructor() {
     this.currencyOneEl = document.querySelector(
@@ -28,6 +31,42 @@ export class CurrencyConverter {
 
   private async init() {
     const exchangeRate = await fetchExchangeRate("USD");
-    
+    if (exchangeRate) {
+      this.exchangeRate = exchangeRate;
+      this.showInitialInfo();
+    }
+  }
+
+  private getOptions(
+    selectedCurrency: string,
+    conversion_rates: { [key: string]: number }
+  ): string {
+    return Object.keys(conversion_rates)
+      .map(
+        (currency) =>
+          `<option value="${currency}" ${
+            currency === selectedCurrency ? "selected" : ""
+          }>${currency}</option>`
+      )
+      .join("");
+  }
+
+  private updateConvertedValue() {
+    if (this.exchangeRate) {
+      const conversion_rates = this.exchangeRate.conversion_rates;
+      const currencyTwoRate = conversion_rates[this.currencyTwoEl.value];
+      this.convertedValueEl.textContent = (
+        this.timesCurrencyOneEl.valueAsNumber * currencyTwoRate
+      ).toFixed(2);
+    }
+  }
+
+  private showInitialInfo() {
+    if (this.exchangeRate) {
+      const conversion_rates = this.exchangeRate.conversion_rates;
+      this.currencyOneEl.innerHTML = this.getOptions("USD", conversion_rates);
+      this.currencyTwoEl.innerHTML = this.getOptions("BRL", conversion_rates);
+      this.updateConvertedValue();
+    }
   }
 }
