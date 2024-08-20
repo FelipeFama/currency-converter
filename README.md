@@ -1,4 +1,4 @@
-# Currency converter with pure javascript
+# Currency converter with vanilla typescript
 
 ![currency-converter](https://github.com/FelipeFama/currency-converter/assets/91050670/441c532e-ca9f-4b9d-b3a0-9949eda0d372)
 
